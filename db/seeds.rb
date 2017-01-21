@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+50_000.times do |i| 
+	Student.create!(
+		first_name: FFaker::Name.first_name,
+		last_name: FFaker::Name.last_name,
+		username: "#{FFaker::Internet.user_name}#{i}",
+		email: FFaker::Internet.user_name + i.to_s + "@#{FFaker::Internet.domain_name}")
+end

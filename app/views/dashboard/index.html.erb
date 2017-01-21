@@ -1,0 +1,8 @@
+<header>
+	<p class="h1">Student record sample app</p>
+	<p class="h6"><%= Rails.version %></p>
+	<p><%= current_user.email %></p>
+	<section class="display-4">Dashboard</section>
+</header>
+
+<%= link_to "Log out",destroy_user_session_path,method: :delete %>
